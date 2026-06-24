@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>EchoMind — AI人格成长教练</title>
+  <script>
+    // GitHub Pages SPA redirect
+    // Redirects /echomind/any-path to /echomind/?redirect=any-path
+    // Then the app reads the redirect param and navigates client-side
+    var path = window.location.pathname;
+    var base = '/echomind';
+    if (path.startsWith(base)) {
+      var redirectPath = path.slice(base.length);
+      window.location.replace(base + '/?redirect=' + encodeURIComponent(redirectPath + window.location.search + window.location.hash));
+    } else {
+      window.location.replace(base + '/');
+    }
+  </script>
+</head>
+<body>
+  <p style="text-align:center;padding:40px;font-family:sans-serif;color:#666;">正在跳转...</p>
+</body>
+</html>
